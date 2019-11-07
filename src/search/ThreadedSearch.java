@@ -53,8 +53,13 @@ public class ThreadedSearch<T> implements Searcher<T>, Runnable {
     }
 
     public void run() {
-        // Delete this `throw` when you actually implement this method.
-        throw new UnsupportedOperationException();
+        for (int i=begin;i<end;i++) {
+            
+            if (list.get(i).equals(target)) {
+                answer.setAnswer(true);
+                break;
+            }
+        }
     }
 
     private class Answer {
